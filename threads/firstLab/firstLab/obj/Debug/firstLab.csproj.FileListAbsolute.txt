@@ -1,0 +1,15 @@
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\bin\Debug\firstLab.exe.config
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\bin\Debug\firstLab.exe
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\bin\Debug\firstLab.pdb
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\obj\Debug\firstLab.csprojAssemblyReference.cache
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\obj\Debug\MainWindow.g.cs
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\obj\Debug\App.g.cs
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\obj\Debug\firstLab_MarkupCompile.cache
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\obj\Debug\firstLab_MarkupCompile.lref
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\obj\Debug\MainWindow.baml
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\obj\Debug\firstLab.g.resources
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\obj\Debug\firstLab.Properties.Resources.resources
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\obj\Debug\firstLab.csproj.GenerateResource.cache
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\obj\Debug\firstLab.csproj.CoreCompileInputs.cache
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\obj\Debug\firstLab.exe
+D:\3is2\timofeev\system programming\threads\firstLab\firstLab\obj\Debug\firstLab.pdb

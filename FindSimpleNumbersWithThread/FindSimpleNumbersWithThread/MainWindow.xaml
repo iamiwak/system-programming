@@ -1,0 +1,38 @@
+﻿<Window x:Class="FindSimpleNumbersWithThread.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FindSimpleNumbersWithThread"
+        mc:Ignorable="d"
+        Title="Find prime numbers with threads" Width="400" Height="450" Closing="FormClosing">
+    <Grid>
+        <DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Label Content="Start range"/>
+                <TextBox x:Name="StartRange" Text="1000000000"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Label Content="End range"/>
+                <TextBox x:Name="EndRange" Text="2000000000"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Label Content="Threads count"/>
+                <TextBox x:Name="ThreadsCount" Width="75" Text="10"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Button Content="Start find prime numbers" Margin="10,5,10,0" Height="25" Click="ChangeThreadsState" x:Name="ChangeStateThreadButtons"/>
+            </DockPanel>
+
+            <DockPanel DockPanel.Dock="Bottom">
+                <Label Content="Threads run: 0" HorizontalAlignment="Left" x:Name="LabelRunThreads"/>
+            </DockPanel>
+
+            <DockPanel DockPanel.Dock="Bottom">
+                <Label Content="Find values:" DockPanel.Dock="Top" HorizontalAlignment="Left"/>
+                <TextBox Height="auto" HorizontalAlignment="Stretch" Width="auto" Margin="10, 5, 10, 0" x:Name="ResultsTextBox"
+                         VerticalContentAlignment="Top" VerticalScrollBarVisibility="Visible"/>
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</Window>

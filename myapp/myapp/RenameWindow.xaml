@@ -1,0 +1,38 @@
+﻿<Window x:Class="myapp.RenameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:myapp"
+        mc:Ignorable="d"
+        Title="Переименовывание файла" Height="150" Width="300" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Column="1" Grid.Row="1">
+            <DockPanel DockPanel.Dock="Top" HorizontalAlignment="Left">
+                <Label Content="Введите новое имя файла:" Padding="5,0,0,0"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <TextBox x:Name="FileName"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Bottom">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Width="100" Content="Отмена" Click="CancelClick"/>
+                    <Button Width="100" Content="ОК" Click="RenameClick"/>
+                </StackPanel>
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</Window>

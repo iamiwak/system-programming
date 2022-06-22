@@ -1,0 +1,93 @@
+﻿<Window x:Class="myapp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:myapp"
+        mc:Ignorable="d"
+        Title="File editor" MinHeight="400" MinWidth="855" Height="600" Width="855" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel Grid.Column="1">
+            <DockPanel DockPanel.Dock="Top">
+                <Label DockPanel.Dock="Left" Content="Путь к файлу"/>
+                <Button DockPanel.Dock="Right" Content="Выбрать..." Click="SelectFile"/>
+                <TextBox TextWrapping="NoWrap" Text="" x:Name="FilePath"/>
+            </DockPanel>
+
+            <DockPanel DockPanel.Dock="Top">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Операции с файлом"/>
+                    <Button Content="Открыть" Click="OpenFile"/>
+                    <Button Content="Запустить" Click="StartFile"/>
+                    <Button Content="Печать" Click="PrintFile" />
+                    <Button Content="Добавить в список" Click="AddToListFiles" />
+                    <Button Content="Переименовать" Click="RenameFile" />
+                </StackPanel>
+            </DockPanel>
+
+            <DockPanel DockPanel.Dock="Top">
+                <Label DockPanel.Dock="Left" Content="Исходная папка"/>
+                <Button DockPanel.Dock="Right" Content="Выбрать..." Click="SelectSourceFolder"/>
+                <TextBox TextWrapping="NoWrap" Text="D:\3is2\timofeev\system programming\test\source" x:Name="SourceFolderPath"/>
+            </DockPanel>
+
+            <DockPanel DockPanel.Dock="Top">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Операции с папкой"/>
+                    <Button Content="Открыть" Click="OpenFolder"/>
+                    <Button Content="Поиск" Click="OpenFolderWithSearch"/>
+                </StackPanel>
+            </DockPanel>
+
+            <DockPanel DockPanel.Dock="Top">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Маска для файлов"/>
+                    <TextBox Width="120" x:Name="FileMask"/>
+                </StackPanel>
+            </DockPanel>
+
+            <DockPanel DockPanel.Dock="Top">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Операции с файлами из папки"/>
+                    <Button Content="Копировать" Click="CopyFilesWithMask"/>
+                    <Button Content="Переместить" Click="MoveFilesWithMask"/>
+                    <Button Content="Удалить" Click="DeleteFilesWithMask"/>
+                </StackPanel>
+            </DockPanel>
+
+            <DockPanel DockPanel.Dock="Bottom">
+                <Label DockPanel.Dock="Left" Content="Конечная папка"/>
+                <Button DockPanel.Dock="Right" Content="Выбрать..." Click="SelectDestinationFolder"/>
+                <TextBox TextWrapping="NoWrap" Text="D:\3is2\timofeev\system programming\test\destination" x:Name="DestinationFolderPath"/>
+            </DockPanel>
+
+            <DockPanel DockPanel.Dock="Bottom">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Операции с файлами из списка"/>
+                    <Button Content="Копировать" Click="CopyFilesFromList" />
+                    <Button Content="Переместить" Click="MoveFilesFromList"/>
+                    <Button Content="Удалить" Click="DeleteFilesFromList"/>
+                    <Button Content="Удалить из списка" Click="DeleteFromList" />
+                    <Button Content="Очистить список" Click="ClearList" />
+                </StackPanel>
+            </DockPanel>
+
+            <DockPanel DockPanel.Dock="Bottom">
+                <Label DockPanel.Dock="Top" HorizontalAlignment="Left" Content="Список файлов:"/>
+                <ListBox x:Name="Files"/>
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</Window>

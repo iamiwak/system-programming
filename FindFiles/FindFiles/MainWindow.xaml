@@ -1,0 +1,74 @@
+﻿<Window x:Class="FindFiles.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FindFiles"
+        mc:Ignorable="d"
+        Title="Find files" Height="500" Width="800" WindowStartupLocation="CenterScreen" MinHeight="300" MinWidth="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="1" Grid.Column="1">
+            <DockPanel DockPanel.Dock="Top">
+                <Label Content="Путь к папке"/>
+                <Button DockPanel.Dock="Right" Content="Выбрать..." Width="120" Click="SelectFolder"/>
+                <TextBox TextWrapping="NoWrap" Text="" x:Name="FolderPath"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Label Content="Поисковая маска"/>
+                <TextBox HorizontalAlignment="Left" Width="200" x:Name="Mask"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Label Content="Маска игнорирования"/>
+                <TextBox HorizontalAlignment="Left" Width="200" x:Name="IgnoreMask"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Label HorizontalAlignment="Left" Content="Размер файлов"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="минимум" Width="70"/>
+                    <TextBox x:Name="MinFileSize" Width="130"/>
+                    <Label Content="максимум" Width="70"/>
+                    <TextBox x:Name="MaxFileSize" Width="130"/>
+                </StackPanel>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Label Content="Тип объекта" HorizontalAlignment="Left"/>
+                <ComboBox x:Name="ItemsType" Width="300" HorizontalAlignment="Left">
+                    <ComboBoxItem IsSelected="True">Всё</ComboBoxItem>
+                    <ComboBoxItem>Только папки</ComboBoxItem>
+                    <ComboBoxItem>Только файлы</ComboBoxItem>
+                </ComboBox>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Label Content="Только скрытые"/>
+                <CheckBox VerticalAlignment="Center" x:Name="OnlyHidden"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Label Content="Рекурсивный поиск"/>
+                <CheckBox VerticalAlignment="Center" x:Name="RecursiveSearch"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Button Content="Начать поиск..." Click="SearchFiles"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Label Content="Объём" HorizontalAlignment="Left"/>
+                <Label Content="0 байт" HorizontalAlignment="Left" x:Name="ItemsWeight"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Bottom">
+                <Label HorizontalAlignment="Left" Content="Список найденых папок и файлов:" DockPanel.Dock="Top"/>
+                <ListBox x:Name="FileList"/>
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</Window>
